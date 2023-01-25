@@ -21,7 +21,6 @@ job('Aplicacion Node.js Docker DSL') {
             createFingerprints(false)
             skipDecorate()
         }
-        shell("docker run -p 3000:3000 -d --name nodejs gevimo/nodejsapp:${GIT_REVISION}")
     }
     publishers {
 	slackNotifier {
